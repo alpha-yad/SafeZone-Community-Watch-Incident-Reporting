@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:id="@+id/parent_layout">
+
+    <!-- Main Content (Sign-up form) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Sign Up Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inknutantiqua_bold" />
+
+        <!-- Input Fields -->
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp"
+            android:fontFamily="@font/inknutantiqua_regular" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="UserName"
+            android:inputType="textPersonName"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp"
+            android:fontFamily="@font/inknutantiqua_regular" />
+
+        <EditText
+            android:id="@+id/phoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Phone No"
+            android:inputType="phone"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp"
+            android:fontFamily="@font/inknutantiqua_regular" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp"
+            android:fontFamily="@font/inknutantiqua_regular" />
+
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp"
+            android:fontFamily="@font/inknutantiqua_regular" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="15dp"
+            android:text="Sign up"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inknutantiqua_semibold"
+            android:textAllCaps="false"
+            android:elevation="0dp" />
+
+        <!-- Bottom Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textSize="14sp"
+                android:fontFamily="@font/inknutantiqua_regular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:id="@+id/Login"
+                android:textColor="@color/yellow"
+                android:textSize="14sp"
+                android:fontFamily="@font/inknutantiqua_bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Loading Animation in the Center -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/loading_animation"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="false"
+        android:visibility="gone"
+        />
+</FrameLayout>

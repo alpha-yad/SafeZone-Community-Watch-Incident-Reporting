@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Safezone</string>
+    <string-array name="incident_types">
+        <item>Suspicious Activity</item>
+        <item>Accident</item>
+        <item>Emergency</item>
+        <item>Theft</item>
+        <item>Other</item>
+    </string-array>
+</resources>
